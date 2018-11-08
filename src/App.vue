@@ -1,30 +1,42 @@
 <template>
   <div id="app">
-    <router-link to="/login">登录</router-link>
-    <router-link to="/register">注册</router-link>
+    <!--1.0 利用mint-ui中的header组件实现-->
+    <mt-header fixed title="Vue商城系统"></mt-header>
+    <!--2.0 利用vue-router的<router-view>进行站位-->
     <router-view></router-view>
-    <mt-button type="danger" size="large">danger</mt-button>
-    <div class="mui-content">
-      <ul class="mui-table-view mui-grid-view mui-grid-9">
-        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-          <span class="mui-icon mui-icon-home"></span>
-          <div class="mui-media-body">Home</div></a></li>
-        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-          <span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
-          <div class="mui-media-body">Email</div></a></li>
-        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-          <span class="mui-icon mui-icon-chatbubble"></span>
-          <div class="mui-media-body">Chat</div></a></li>
-      </ul>
-    </div>
+    <!--3.0 利用mui中的tabbar组件实现系统的底部-->
+    <nav class="mui-bar mui-bar-tab" @click="removeTab()">
+      <router-link class="mui-tab-item" to="/home">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+      </router-link>
+      <router-link class="mui-tab-item" to="/tabbar-with-chat">
+        <span class="mui-icon mui-icon-contact"></span>
+        <span class="mui-tab-label">会员</span>
+      </router-link>
+      <router-link class="mui-tab-item" to="/shopcar">
+        <span class="mui-icon mui-icon-pengyouquan"><span class="mui-badge">0</span></span>
+        <span class="mui-tab-label">购物车</span>
+      </router-link>
+      <router-link class="mui-tab-item" to="/tabbar-with-map">
+        <span class="mui-icon mui-icon-search"></span>
+        <span class="mui-tab-label">搜索</span>
+      </router-link>
+    </nav>
 
   </div>
 </template>
 
 <script>
-import { Button } from 'mint-ui';
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {}
+  },
+  methods: {
+    removeTab(idx) {
+    }
+  }
 }
 </script>
 
@@ -35,6 +47,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
