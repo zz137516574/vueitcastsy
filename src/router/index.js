@@ -14,7 +14,7 @@ export default new Router({
       meta: {
         title: '首页'
       },
-      component: (resolve) => require(['@/components/Home.vue'], resolve),
+      component: (resolve) => require(['@/views/Home.vue'], resolve),
       redirect:'/home', //路由重定向
     },
     {
@@ -23,7 +23,23 @@ export default new Router({
       meta: {
         title: '首页'
       },
-      component: (resolve) => require(['@/components/Home.vue'], resolve),
+      component: (resolve) => require(['@/views/Home.vue'], resolve),
+    },
+    {
+      path: '/news',
+      name: 'news',
+      meta: {
+        title: '新闻资讯'
+      },
+      component: (resolve) => require(['@/views/news.vue'], resolve)
+    },
+    {
+      path: '/newsDetail',
+      name: 'newsDetail',
+      meta: {
+        title: '新闻资讯详情页'
+      },
+      component: (resolve) => require(['@/views/newsDetail.vue'], resolve)
     },
     {
       path: '/shopcar',

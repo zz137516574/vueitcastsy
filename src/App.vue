@@ -5,7 +5,7 @@
     <!--2.0 利用vue-router的<router-view>进行站位-->
     <router-view></router-view>
     <!--3.0 利用mui中的tabbar组件实现系统的底部-->
-    <nav class="mui-bar mui-bar-tab" @click="removeTab()">
+    <nav class="mui-bar mui-bar-tab">
       <router-link class="mui-tab-item" to="/home">
         <span class="mui-icon mui-icon-home"></span>
         <span class="mui-tab-label">首页</span>
@@ -34,8 +34,6 @@ export default {
     return {}
   },
   methods: {
-    removeTab(idx) {
-    }
   }
 }
 </script>

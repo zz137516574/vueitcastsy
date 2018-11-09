@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from './axios'
 
 // 2.0 引入mint-ui的全部组件
 import 'mint-ui/lib/style.min.css'
@@ -28,6 +29,7 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   router,
+  axios,
   components: { App },
   template: '<App/>'
 });

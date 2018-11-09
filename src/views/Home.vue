@@ -41,7 +41,7 @@
           {
             iconName:'mui-icon-home',
             name:'新闻资讯',
-            url:'/news/newslist'
+            url:'/news'
           },
           {
             iconName:'mui-icon-email',
@@ -56,7 +56,7 @@
           {
             iconName:'mui-icon-chatbubble',
             name:'商品购买',
-            url:'/goods/goodslist'
+            url:'/goods'
           },
           {
             iconName:'mui-icon-info',
@@ -80,7 +80,7 @@
         // 2.0 调用$http.get
         this.$http.jsonp(url).then(function (response) {
           let data = response.body;
-          console.log(data);
+//          console.log(data);
           if(data.count != 0 || data.count != undefined){
             this.swiperList = data.subjects;
           }else{
@@ -95,12 +95,12 @@
 
 <style scoped="scoped">
   .mint-swipe{
-    height: 400px;
+    height: 350px;
   }
   .mint-swipe-item{
     background-color: red;
     width: 100%;
-    height: 400px;
+    height: 350px;
   }
   .mint-swipe-item img{
     width: 100%;
