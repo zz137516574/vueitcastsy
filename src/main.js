@@ -23,6 +23,12 @@ import '../static/css/site.css'
 import VueResource from 'vue-resource'
 Vue.use(VueResource);
 
+// 6.0 定义Vue的全局过滤器（日期格式化--Moment.js 是 JavaScript日期处理类库）
+import moment from 'moment'
+Vue.filter('datefmt',function (input,fmtstring) {
+  return moment(input).format(fmtstring);
+});
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

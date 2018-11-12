@@ -18,7 +18,10 @@
         </li>
       </ul>
     </div>
-
+    <div class="addtime">
+      <!--日期格式化-->
+      发表时间：{{addTime | datefmt('YYYY-MM-DD HH:mm:ss')}}
+    </div>
   </div>
 </template>
 
@@ -63,12 +66,15 @@
             name:'联系我们',
             url:'callme'
           }
-        ]
+        ],
+        addTime:'0'
       }
     },
     created(){
       // 当页面中的data和methods对象创建完毕后，就会自动调用created
       this.getimgs();
+//      this.getAddTime();
+      setInterval(this.getAddTime,1000);
     },
     components: {},
     methods: {
@@ -88,7 +94,11 @@
             return;
           }
         })
-      }
+      },
+      //获取本地时间
+      getAddTime(){
+        this.addTime = new Date();
+      },
     }
   }
 </script>
@@ -145,6 +155,12 @@
   .mui-icon-info:before{
     background-image: url("../../static/imgs/6.png");
   }
-
+  .addtime{
+    padding: 15px 0 15px 30px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    text-align: left;
+    font-size: 14px;
+  }
 </style>
 

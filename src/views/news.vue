@@ -1,6 +1,6 @@
 <template>
   <div id="tmpl">
-    <v-newsItem :newsData="newsList" @getnewsDetail="getnewsDetail"></v-newsItem>
+    <v-newsItem :newsData="newsList" @getnewsInfo="getnewsDetail"></v-newsItem>
   </div>
 </template>
 
@@ -36,8 +36,9 @@
         // axios请求数据
         let that = this;
         this.axios.get(url).then(function (response) {
-          console.log(response);
-          if( response.data.data != "" || response.data.data != "undefined"){
+//          console.log(response);
+          if( response.data != "" || response.data != "undefined"){
+            // 这里that.newsList的this，特值全局this
             that.newsList = response.data;
           }else{
             Toast('暂无数据');
@@ -48,11 +49,11 @@
         });
       },
       // 进详情页
-      getnewsDetail(newItem){
+      getnewsDetail(newid){
         this.$router.push({
           path:'newsDetail',
           query:{
-            newsID:newsItem
+            newsId:newid
           }
         })
       }

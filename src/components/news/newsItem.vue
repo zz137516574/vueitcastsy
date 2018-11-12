@@ -1,7 +1,7 @@
 <template>
   <div id="tmpl">
     <ul class="mui-table-view">
-      <li class="mui-table-view-cell mui-media" v-for="(item,index) in newsData" :key="index" @click="getnewsDetail(item)">
+      <li class="mui-table-view-cell mui-media" v-for="(item,index) in newsData" :key="index" @click="getnewsInfo(item.id)">
         <a href="javascript:;">
           <img class="mui-media-object mui-pull-left" :src="item.url">
           <div class="mui-media-body">
@@ -26,8 +26,8 @@
         },
         components: {},
         methods: {
-          getnewsDetail(itemId){
-            this.$emit('getnewsDetail',itemId)
+          getnewsInfo(itemId){
+            this.$emit('getnewsInfo',itemId);
           }
         }
     }
