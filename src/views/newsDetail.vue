@@ -16,6 +16,7 @@
 </template>
 
 <script>
+  import common from '../kits/common.js';
   export default {
     data() {
       return {
@@ -33,7 +34,7 @@
     methods: {
       //获取详情信息
       getDetail(){
-        let url = "http://jsonplaceholder.typicode.com/posts/1";
+        let url = common.apidomain+"/posts/1";
 
         let that = this;
         this.axios.get(url).then(function (response) {

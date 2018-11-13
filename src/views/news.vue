@@ -6,6 +6,7 @@
 
 <script>
   import newsItem from '../components/news/newsItem.vue';
+  import common from '../kits/common.js';
   export default {
     data() {
       return {
@@ -20,7 +21,7 @@
     },
     methods: {
       getnewslist(){
-        let url="http://jsonplaceholder.typicode.com/photos";
+        let url=common.apidomain+"/photos";
 
         // vue-resource请求数据
 //        this.$http.get(url).then(function (response) {
