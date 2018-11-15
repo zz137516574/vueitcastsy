@@ -18,8 +18,9 @@
         </li>
       </ul>
     </div>
+
+    <!--3.0 日期格式化-->
     <div class="addtime">
-      <!--日期格式化-->
       发表时间：{{addTime | datefmt('YYYY-MM-DD HH:mm:ss')}}
     </div>
   </div>
@@ -59,7 +60,7 @@
           {
             iconName:'mui-icon-chatbubble',
             name:'商品购买',
-            url:'/goods'
+            url:'/shopcar'
           },
           {
             iconName:'mui-icon-info',

@@ -5,24 +5,27 @@
       <p>
         <!--日期格式化-->
         发布时间：{{addTime | datefmt('YYYY-MM-DD HH:mm:ss')}}
-        <span>3次浏览</span>
+        <span>{{newsDate.id}}次浏览</span>
       </p>
     </div>
     <div class="content">
       {{newsDate.body}}
       <img src="../../static/imgs/n1.jpg" alt="我是图片，啦啦啦~">
     </div>
+    <v-comment :commData="commData"></v-comment>
   </div>
 </template>
 
 <script>
   import common from '../kits/common.js';
+  import comment  from '../components/news/comment.vue';
   export default {
     data() {
       return {
         newsId:0,
         newsDate:{},
-        addTime:0
+        addTime:0,
+        commData:{}
       }
     },
     mounted(){
@@ -30,14 +33,17 @@
       this.getDetail();
       setInterval(this.getAddTime,1000);
     },
-    components: {},
+    components: {
+      'v-comment':comment
+    },
     methods: {
       //获取详情信息
       getDetail(){
-        let url = common.apidomain+"/posts/1";
+        let url = common.apidomain+"/posts/"+this.newsId;
 
         let that = this;
         this.axios.get(url).then(function (response) {
+//        this.axios.post(url,{'title': 'foo', 'body': '我是测试数据，啦啦啦~', 'userId': 1}).then(function (response) {
           console.log(response);
           if(response.data != "" || response.data != "undefined"){
             that.newsDate = response.data;

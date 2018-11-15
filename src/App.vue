@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!--1.0 利用mint-ui中的header组件实现-->
-    <mt-header fixed title="Vue商城系统"></mt-header>
+    <mt-header fixed title="Vue测试系统"></mt-header>
     <!--2.0 利用vue-router的<router-view>进行站位-->
     <router-view></router-view>
     <!--3.0 利用mui中的tabbar组件实现系统的底部-->
