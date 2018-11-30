@@ -48,6 +48,22 @@ export default new Router({
         title: '购物车'
       },
       component: (resolve) => require(['@/components/shopcar/car.vue'], resolve)
+    },
+    {
+      path: '/callme',
+      name: 'callme',
+      meta: {
+        title: '联系我们'
+      },
+      component: (resolve) => require(['@/views/callme.vue'], resolve)
+    },
+    {
+      path: '/vuexDemo',
+      name: 'vuexDemo',
+      meta: {
+        title: 'vuexDemo'
+      },
+      component: (resolve) => require(['@/views/vuexDemo.vue'], resolve)
     }
   ]
 })

@@ -2,6 +2,8 @@
   <div id="app">
     <!--1.0 利用mint-ui中的header组件实现-->
     <mt-header fixed title="Vue测试系统"></mt-header>
+    <!--<div style="margin-top: 40px;margin-bottom: 20px">{{count}}</div>-->
+
     <!--2.0 利用vue-router的<router-view>进行站位-->
     <router-view></router-view>
     <!--3.0 利用mui中的tabbar组件实现系统的底部-->
@@ -10,9 +12,9 @@
         <span class="mui-icon mui-icon-home"></span>
         <span class="mui-tab-label">首页</span>
       </router-link>
-      <router-link class="mui-tab-item" to="/tabbar-with-chat">
+      <router-link class="mui-tab-item" to="/vuexDemo">
         <span class="mui-icon mui-icon-contact"></span>
-        <span class="mui-tab-label">会员</span>
+        <span class="mui-tab-label">Vuex</span>
       </router-link>
       <router-link class="mui-tab-item" to="/shopcar">
         <span class="mui-icon mui-icon-pengyouquan"><span class="mui-badge">0</span></span>
@@ -28,14 +30,19 @@
 </template>
 
 <script>
-export default {
-  name: 'App',
-  data() {
-    return {}
-  },
-  methods: {
+//  import {mapState} from "vuex";
+  export default {
+    name: 'App',
+    data() {
+      return {}
+    },
+//    computed:{
+//      // ...解构赋值
+//      ...mapState(["count"])
+//    },
+    methods: {
+    }
   }
-}
 </script>
 
 <style>

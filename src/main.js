@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from './axios'
+import store from './../store/index'
 
 // 2.0 引入mint-ui的全部组件
 import 'mint-ui/lib/style.min.css'
@@ -29,6 +30,7 @@ Vue.filter('datefmt',function (input,fmtstring) {
   return moment(input).format(fmtstring);
 });
 
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
@@ -36,6 +38,7 @@ new Vue({
   el: '#app',
   router,
   axios,
+  store,
   components: { App },
   template: '<App/>'
 });

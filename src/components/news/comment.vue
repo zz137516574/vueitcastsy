@@ -10,18 +10,21 @@
 </template>
 
 <script>
-    export default {
-        props:{
-          commData:{
-            required: true
-          }
-        },
-        data() {
-            return {}
-        },
-        components: {},
-        methods: {}
+  import common from '../../kits/common.js';
+  export default {
+    props:{
+      commData:{
+        required: true
+      }
+    },
+    data() {
+        return {}
+    },
+    components: {},
+    methods: {
+
     }
+  }
 </script>
 
 <style scoped="scoped">

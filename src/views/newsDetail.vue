@@ -10,7 +10,7 @@
     </div>
     <div class="content">
       {{newsDate.body}}
-      <img src="../../static/imgs/n1.jpg" alt="我是图片，啦啦啦~">
+      <img src="/static/imgs/n1.jpg" alt="我是图片，啦啦啦~">
     </div>
     <v-comment :commData="commData"></v-comment>
   </div>

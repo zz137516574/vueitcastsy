@@ -40,7 +40,7 @@
           {
             iconName:'mui-icon-search',
             name:'视频专区',
-            url:'/video'
+            url:''
           },
           {
             iconName:'mui-icon-home',
@@ -50,12 +50,12 @@
           {
             iconName:'mui-icon-email',
             name:'图片分享',
-            url:'/photo/photolist'
+            url:''
           },
           {
             iconName:'mui-icon-location',
             name:'留言反馈',
-            url:'/feedback'
+            url:''
           },
           {
             iconName:'mui-icon-chatbubble',
@@ -65,7 +65,7 @@
           {
             iconName:'mui-icon-info',
             name:'联系我们',
-            url:'callme'
+            url:'/callme'
           }
         ],
         addTime:'0'
